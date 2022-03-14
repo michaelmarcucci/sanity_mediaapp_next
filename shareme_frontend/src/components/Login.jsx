@@ -17,9 +17,10 @@ const Login = () => {
     const doc = {
       _id: googleId,
       _type: 'user',
-      userNaame: name,
+      userName: name,
       image: imageUrl,
     }
+    
     client.createIfNotExists(doc)
       .then( () => {
         navigate('/', { replace: true })
